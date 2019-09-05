@@ -8,7 +8,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 @NgModule({
   declarations: [PokemonPageComponent, HomePageComponent],
   exports: [
-    PokemonPageComponent
+    HomePageComponent
   ],
   imports: [
     CommonModule,
