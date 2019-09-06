@@ -1,0 +1,47 @@
+@import "../../../../../styles/variables";
+
+#top, #bottom, #left, #right, #corner {
+    background: $pokemon-red;
+    position: fixed;
+    z-index: 999;
+}
+
+#corner {
+    bottom: 0;
+    left: 0;
+    transform: rotate(45deg);
+    width: 100px;
+    height: 100px;
+
+
+}
+
+
+#left, #right {
+    top: 0;
+    bottom: 0;
+    width: 15px;
+}
+
+#left {
+    left: 0;
+}
+
+#right {
+    right: 0;
+
+}
+
+#top, #bottom {
+    left: 0;
+    right: 0;
+    height: 15px;
+}
+
+#top {
+    top: 0;
+}
+
+#bottom {
+    bottom: 0;
+}
