@@ -1,5 +1,8 @@
-<a class="d-block flex-1 border my-3 p-3 pb-0 shadow-sm card">
-    <div class="card-body p-0">
-        <p class="mb-0">{{ pokemon.name | titlecase}}</p>
-    </div>
+<a class="d-block flex-1 border my-2 px-2 pb-2 shadow-sm card">
+  <div>
+    <img src="{{pokemon.img}}"/>
+  </div>
+  <div class="card-body p-0">
+    <p class=" mb-0">{{ pokemon.name | titlecase}}</p>
+  </div>
 </a>
