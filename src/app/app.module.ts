@@ -5,6 +5,7 @@ import {AppComponent} from './app.component';
 import {PokedexModule} from './modules/pokedex/pokedex.module';
 import {CommonModule} from '@angular/common';
 import {AppRoutingModule} from './app-routing.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,9 +16,9 @@ import {AppRoutingModule} from './app-routing.module';
     CommonModule,
     PokedexModule,
     AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
 }
