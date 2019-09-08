@@ -19,7 +19,7 @@ export class PokemonPageComponent implements OnInit {
   ngOnInit() {
     this.pokemonList = MOCK20POKEMONRESULT.results;
     this._pokemonService.getOriginal151Pokemon()
-      .subscribe(response => console.log(response));
+      .subscribe(response => this.pokemonList = response.results);
   }
 
 }
