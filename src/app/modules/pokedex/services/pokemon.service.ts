@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {PokemonRepository} from './pokemon.repository';
-import {Observable} from "rxjs";
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +14,10 @@ export class PokemonService {
 
   public getOriginal151Pokemon(): Observable<any> {
     return this._pokemonRepository.getOriginal151Pokemon();
+  }
+
+  public getPokemonDetails(name: string): Observable<any> {
+    return this._pokemonRepository.getPokemonDetails(name);
   }
 
 }

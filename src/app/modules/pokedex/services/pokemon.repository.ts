@@ -26,5 +26,9 @@ export class PokemonRepository {
     return this._original151PokemonList;
   }
 
+  public getPokemonDetails(name: string): Observable<any> {
+    return null;
+  }
+
 
 }
