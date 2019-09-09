@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {MOCK20POKEMONRESULT} from '../../../mockup-pokemon-results';
 import {PokemonService} from '../../services/pokemon.service';
 
 @Component({
@@ -17,9 +16,10 @@ export class PokemonPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.pokemonList = MOCK20POKEMONRESULT.results;
     this._pokemonService.getOriginal151Pokemon()
-      .subscribe(response => this.pokemonList = response.results);
+      .subscribe((response) => {
+        console.log(response);
+      });
   }
 
 }
