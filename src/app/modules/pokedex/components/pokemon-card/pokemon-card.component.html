@@ -1,9 +1,9 @@
-<a class="d-block flex-1 border my-2 px-2 pb-2 shadow-sm">
+<a class="d-block flex-1 border my-2 px-2 pb-2 shadow-sm bg-light">
   <div>
-    <img src="{{pokemon.img}}"/>
+    <img src="{{pokemon.img}}" alt="Image not foun"/>
   </div>
   <div class="card-body p-0 text-left">
-    <p class="mb-0">{{ pokemon.id | pokeNo}}</p>
-    <h4 class=" mb-0">{{ pokemon.name | titlecase}}</h4>
+    <h5 class="mb-0">{{ pokemon.id | pokeNo}}</h5>
+    <h4 class="mb-0">{{ pokemon.name | titlecase}}</h4>
   </div>
 </a>

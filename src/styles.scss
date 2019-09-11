@@ -37,9 +37,14 @@
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/print";
 
+.bg-darker {
+  background-color: #ECF7F1;
+}
 
 .col-1\.5 {
-  width: 10%;
-  position: relative;
+  width: 14.2%;
+}
 
+h4, h6 {
+  font-family: $default-font;
 }
