@@ -3,7 +3,7 @@
     <img src="{{pokemon.img}}"/>
   </div>
   <div class="card-body p-0 text-left">
-    <p class="mb-0">{{ pokemon.id}}</p>
+    <p class="mb-0">{{ pokemon.id | pokeNo}}</p>
     <h4 class=" mb-0">{{ pokemon.name | titlecase}}</h4>
   </div>
 </a>
