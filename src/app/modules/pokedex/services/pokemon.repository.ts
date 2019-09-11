@@ -22,7 +22,7 @@ export class PokemonRepository {
     let mappedResponse;
 
     if (!this._original151PokemonList) {
-      this._original151PokemonList = this._httpClient.get('https://pokeapi.co/api/v2/pokemon?limit=5')
+      this._original151PokemonList = this._httpClient.get('https://pokeapi.co/api/v2/pokemon?limit=101')
         .pipe(
           map(response => mappedResponse = PokemonMapper.mapOriginalList(response)),
           mergeMap(() => {

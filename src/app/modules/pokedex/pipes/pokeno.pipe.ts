@@ -4,7 +4,13 @@ import {Pipe, PipeTransform} from '@angular/core';
   name: 'pokeNo'
 })
 export class PokeNoPipe implements PipeTransform {
-  transform(value): any {
-    console.log(value);
+  transform(pokemonNumber: number, extension: string = '#'): any {
+    if (pokemonNumber >= 0 && pokemonNumber <= 9) {
+      return (`${extension}00${pokemonNumber}`);
+    } else if (pokemonNumber >= 10 && pokemonNumber <= 99) {
+      return (`${extension}0${pokemonNumber}`);
+    } else if (pokemonNumber >= 100 && pokemonNumber <= 1000) {
+      return (`${extension}${pokemonNumber}`);
+    }
   }
 }
