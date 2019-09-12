@@ -1,3 +1,5 @@
+import {IPokemonCard} from '../types/IPokemon';
+
 export class PokemonMapper {
 
   public static mapOriginalList(pokemonList: any) {
@@ -12,7 +14,7 @@ export class PokemonMapper {
       img: pokemonDetails.sprites.front_default,
       id: pokemonDetails.id,
       types: pokemonDetails.types
-    };
+    } as IPokemonCard;
 
   }
 

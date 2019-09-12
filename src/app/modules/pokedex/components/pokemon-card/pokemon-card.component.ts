@@ -1,19 +1,32 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { IPokemonCard } from '../../types/IPokemon';
+import {Component, Input, OnInit} from '@angular/core';
+import {IPokemonCard, IPokemonType} from '../../types/IPokemon';
 
 @Component({
-    selector: 'pokemon-card',
-    templateUrl: './pokemon-card.component.html',
-    styleUrls: ['./pokemon-card.component.scss']
+  selector: 'pokemon-card',
+  templateUrl: './pokemon-card.component.html',
+  styleUrls: ['./pokemon-card.component.scss']
 })
 export class PokemonCardComponent implements OnInit {
 
-    @Input() pokemon: IPokemonCard;
+  @Input() pokemon: IPokemonCard;
 
-    constructor() {
-    }
+  public typeOne: IPokemonType;
+  public typeTwo: IPokemonType;
 
-    ngOnInit() {
-    }
+  constructor() {
+  }
+
+
+  ngOnInit() {
+    console.log(this.pokemon.types);
+
+    this.pokemon.types.map((type) => {
+      if (type.slot === 1) {
+        this.typeOne = type;
+      } else if (type.slot === 2) {
+        this.typeTwo = type;
+      }
+    });
+  }
 
 }

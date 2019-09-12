@@ -1,9 +1,13 @@
 <a class="d-block flex-1 border my-2 px-2 pb-2 shadow-sm bg-light">
   <div>
-    <img src="{{pokemon.img}}" alt="Image not foun"/>
+    <img src="{{pokemon.img}}" alt="Image not found"/>
   </div>
   <div class="card-body p-0 text-left">
     <h5 class="mb-0">{{ pokemon.id | pokeNo}}</h5>
     <h4 class="mb-0">{{ pokemon.name | titlecase}}</h4>
+  </div>
+  <div>
+    <span class="type">{{ typeOne?.type.name}} </span><span *ngIf="typeTwo"
+                                                            class="type">{{ typeTwo?.type.name }}</span>
   </div>
 </a>

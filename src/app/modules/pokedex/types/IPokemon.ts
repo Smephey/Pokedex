@@ -14,8 +14,3 @@ export interface IElementType {
   name: string;
   url: string;
 }
-
-export interface IPokemonResponse {
-  name: string;
-  url: string;
-}
