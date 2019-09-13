@@ -8,13 +8,13 @@ export class PokemonMapper {
     };
   }
 
-  public static mapPokemonCard(pokemonDetails: any) {
+  public static mapPokemonCard(pokemonDetails: any): IPokemonCard {
     return {
       name: pokemonDetails.name,
       img: pokemonDetails.sprites.front_default,
       id: pokemonDetails.id,
       types: pokemonDetails.types
-    } as IPokemonCard;
+    };
 
   }
 
