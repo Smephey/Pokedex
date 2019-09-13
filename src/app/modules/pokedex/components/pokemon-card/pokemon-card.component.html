@@ -6,8 +6,8 @@
         <h5 class="mb-0">{{ pokemon.id | pokeNo}}</h5>
         <h4 class="mb-0">{{ pokemon.name | titlecase}}</h4>
         <div class="row m-0 justify-content-center pt-1">
-            <span *ngIf="typeOne" [ngClass]="typeOne?.type.name" class="type col-5 ml-2 mr-1">{{ typeOne?.type.name}}</span>
-            <span *ngIf="typeTwo" [ngClass]="typeTwo?.type.name" class="type col-5 mr-2 ml-1">{{ typeTwo?.type.name }}</span>
+            <span *ngIf="typeOne" [ngClass]="typeOne?.type.name" class="type col-5 ml-2 mr-1">{{ typeOne?.type.name | titlecase}}</span>
+            <span *ngIf="typeTwo" [ngClass]="typeTwo?.type.name" class="type col-5 mr-2 ml-1">{{ typeTwo?.type.name | titlecase}}</span>
         </div>
     </div>
 </a>
