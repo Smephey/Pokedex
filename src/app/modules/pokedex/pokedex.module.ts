@@ -9,7 +9,7 @@ import { PageBorderComponent } from './components/page-border/page-border.compon
 import { HttpClientModule } from '@angular/common/http';
 import { PokeNoPipe } from './pipes/pokeno.pipe';
 import { PokemonTypePipe } from './pipes/pokemon-type.pipe';
-
+import { PagedPokemonComponent } from './pages/paged-pokemon/paged-pokemon.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +19,8 @@ import { PokemonTypePipe } from './pipes/pokemon-type.pipe';
         PokemonCardComponent,
         PageBorderComponent,
         PokeNoPipe,
-        PokemonTypePipe
+        PokemonTypePipe,
+        PagedPokemonComponent
     ],
     exports: [
         HomePageComponent,
