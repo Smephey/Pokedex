@@ -38,13 +38,114 @@
 @import "~bootstrap/scss/print";
 
 .bg-darker {
-  background-color: #ECF7F1;
+    background-color: #ECF7F1;
 }
 
 .col-1\.5 {
-  width: 14.2%;
+    width: 14.2%;
 }
 
 h4, h6 {
-  font-family: $default-font;
+    font-family: $default-font;
+}
+
+.type {
+    padding-bottom: 3px;
+    padding-top: 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: center;
+    border-radius: 3px;
+
+    &.normal {
+        background-color: $normal-grey;
+        color: $dark-text;
+    }
+
+    &.fire {
+        background-color: $fire-red;
+        color: $white;
+    }
+
+    &.fighting {
+        background-color: $fighting-brown;
+        color: $white;
+    }
+
+    &.poison {
+        background: #B97FC9;
+        color: white;
+    }
+
+    &.grass {
+        background: #9BCC50;
+        color: $dark-text
+    }
+
+
+    &.flying {
+        background: $flying-blue;
+        color: $dark-text
+
+    }
+
+    &.water {
+        background-color: $water-blue;
+        color: $white;
+    }
+
+    &.grass {
+        background-color: $grass-green;
+        color: $dark-text;
+    }
+
+    &.electric {
+        background-color: $electric-yellow;
+        color: $dark-text;
+    }
+
+    &.ground {
+        background: $ground-yellow;
+        color: $dark-text;
+    }
+
+    &.psychic {
+        background-color: $psychic-pink;
+        color: $white;
+    }
+
+    &.rock {
+        background-color: $ground-yellow;
+        color: $white;
+    }
+
+    &.ice {
+        background-color: $ice-blue;
+        color: $dark-text
+    }
+
+    &.bug {
+        background-color: $bug-green;
+        color: $white;
+    }
+
+    &.dragon {
+        background: $dragon-blue;
+        color: $white;
+    }
+
+    &.ghost {
+        background-color: $ghost-purple;
+        color: $white;
+    }
+
+    &.steel {
+        background-color: $steel-silver;
+        color: $dark-text;
+    }
+
+    &.fairy {
+        background-color: $fairy-pink;
+        color: $dark-text;
+    }
 }
