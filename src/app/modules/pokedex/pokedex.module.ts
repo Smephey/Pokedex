@@ -11,6 +11,7 @@ import { PokeNoPipe } from './pipes/pokeno.pipe';
 import { PokemonTypePipe } from './pipes/pokemon-type.pipe';
 import { PagedPokemonComponent } from './pages/paged-pokemon/paged-pokemon.component';
 import { SvgIconComponent } from './components/svg-icon/svg-icon.component';
+import { PaginatorComponent } from './components/paginator/paginator.component';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { SvgIconComponent } from './components/svg-icon/svg-icon.component';
         PokeNoPipe,
         PokemonTypePipe,
         PagedPokemonComponent,
-        SvgIconComponent
+        SvgIconComponent,
+        PaginatorComponent
     ],
     exports: [
         HomePageComponent,
