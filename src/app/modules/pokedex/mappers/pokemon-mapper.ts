@@ -43,14 +43,4 @@ export class PokemonMapper {
         return null;
     }
 
-
-    // const name = this.pokemon.name;
-    // if (name.slice(-2) === '-f') {
-    //     this.gender = 'female';
-    // } else if (name.slice(-2) === '-m') {
-    //     this.gender = 'male';
-    // } else {
-    //     this.gender = null;
-    // }
-
 }

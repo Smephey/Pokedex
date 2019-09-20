@@ -14,7 +14,6 @@ export class PokemonCardComponent implements OnInit {
     public typeTwo: IPokemonType;
 
     public ngOnInit(): void {
-        console.log(this.pokemon.name);
 
         this.pokemon.types.map((type) => {
             if (type.slot === 1) {
@@ -23,7 +22,6 @@ export class PokemonCardComponent implements OnInit {
                 this.typeTwo = type;
             }
         });
-
     }
 
 }
