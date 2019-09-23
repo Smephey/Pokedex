@@ -12,6 +12,7 @@ import { PokemonTypePipe } from './pipes/pokemon-type.pipe';
 import { PagedPokemonComponent } from './pages/paged-pokemon/paged-pokemon.component';
 import { SvgIconComponent } from './components/svg-icon/svg-icon.component';
 import { PaginatorComponent } from './components/paginator/paginator.component';
+import { PokemonDetailPageComponent } from './pages/pokemon-detail-page/pokemon-detail-page.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { PaginatorComponent } from './components/paginator/paginator.component';
         PokemonTypePipe,
         PagedPokemonComponent,
         SvgIconComponent,
-        PaginatorComponent
+        PaginatorComponent,
+        PokemonDetailPageComponent
     ],
     exports: [
         HomePageComponent,
