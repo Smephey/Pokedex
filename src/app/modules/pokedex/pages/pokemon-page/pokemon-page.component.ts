@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {PokemonService} from '../../services/pokemon.service';
 import {IPokemonCard} from '../../types/IPokemon';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'pokemon-page',
@@ -10,7 +11,12 @@ import {IPokemonCard} from '../../types/IPokemon';
 export class PokemonPageComponent implements OnInit {
 
   allPokemon: Array<IPokemonCard>;
+
+  @Output()
+  public pokemonClicked = new EventEmitter<any>();
+
   private _pokemonService: PokemonService;
+  private _subscribtions: Subscription;
 
   constructor(pokemonService: PokemonService) {
     this._pokemonService = pokemonService;
@@ -23,4 +29,8 @@ export class PokemonPageComponent implements OnInit {
       });
   }
 
+
+  goToDetails($event: number) {
+    console.log($event);
+  }
 }

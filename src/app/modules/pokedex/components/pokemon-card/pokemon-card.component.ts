@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {IPokemonCard, IPokemonType} from '../../types/IPokemon';
 
 @Component({
@@ -9,6 +9,8 @@ import {IPokemonCard, IPokemonType} from '../../types/IPokemon';
 export class PokemonCardComponent implements OnInit {
 
   @Input() pokemon: IPokemonCard;
+
+  @Output() pokemonClicked: EventEmitter<number> = new EventEmitter<number>();
 
   public typeOne: IPokemonType;
   public typeTwo: IPokemonType;
@@ -28,4 +30,7 @@ export class PokemonCardComponent implements OnInit {
     });
   }
 
+  goToDetails() {
+    this.pokemonClicked.emit(this.pokemon.id);
+  }
 }
