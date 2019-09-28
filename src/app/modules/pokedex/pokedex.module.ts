@@ -10,7 +10,11 @@ import {HttpClientModule} from '@angular/common/http';
 import {PokeNoPipe} from './pipes/pokeno.pipe';
 import {PokemonTypePipe} from './pipes/pokemon-type.pipe';
 import {PagedPokemonComponent} from './pages/paged-pokemon/paged-pokemon.component';
+import {SvgIconComponent} from './components/svg-icon/svg-icon.component';
+import {PaginatorComponent} from './components/paginator/paginator.component';
+import {PokemonDetailPageComponent} from './pages/pokemon-detail-page/pokemon-detail-page.component';
 import {PokemonGenderPipe} from './pipes/pokemon-gender.pipe';
+import { LazyLoadedPokemonComponent } from './pages/lazy-loaded-pokemon/lazy-loaded-pokemon.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import {PokemonGenderPipe} from './pipes/pokemon-gender.pipe';
     PokeNoPipe,
     PokemonTypePipe,
     PagedPokemonComponent,
-    PokemonGenderPipe
+    SvgIconComponent,
+    PaginatorComponent,
+    PokemonDetailPageComponent,
+    PokemonGenderPipe,
+    LazyLoadedPokemonComponent
   ],
   exports: [
     HomePageComponent,

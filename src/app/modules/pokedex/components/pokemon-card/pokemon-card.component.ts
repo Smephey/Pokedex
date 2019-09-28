@@ -15,10 +15,6 @@ export class PokemonCardComponent implements OnInit {
   public typeOne: IPokemonType;
   public typeTwo: IPokemonType;
 
-  constructor() {
-  }
-
-
   ngOnInit() {
 
     this.pokemon.types.map((type) => {
