@@ -17,4 +17,8 @@ export class PokemonService {
     return this._pokemonRepository.getOriginal151Pokemon();
   }
 
+  public getPokemon(offset: number, limit: number): Observable<Array<IPokemonCard>> {
+    return this._pokemonRepository.getPokemon(offset, limit);
+  }
+
 }

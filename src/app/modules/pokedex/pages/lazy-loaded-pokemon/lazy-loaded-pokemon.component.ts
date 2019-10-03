@@ -21,13 +21,12 @@ export class LazyLoadedPokemonComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._pokemonService.getOriginal151Pokemon()
+    this._pokemonService.getPokemon(0, 50)
       .subscribe((pokemonList) => {
         this.allPokemon = pokemonList;
       });
 
   }
-
 
   goToDetails($event: number) {
     console.log($event);
