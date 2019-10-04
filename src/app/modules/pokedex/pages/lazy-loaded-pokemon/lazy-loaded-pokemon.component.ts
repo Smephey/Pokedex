@@ -15,13 +15,17 @@ export class LazyLoadedPokemonComponent implements OnInit {
   public pokemonClicked = new EventEmitter<any>();
 
   private _pokemonService: PokemonService;
+  private _offset = 0;
+  private _limit = 50;
 
   constructor(pokemonService: PokemonService) {
     this._pokemonService = pokemonService;
   }
 
   ngOnInit(): void {
-    this._pokemonService.getPokemon(0, 50)
+    const offset = this._offset;
+    const limit = this._limit;
+    this._pokemonService.getPokemon(offset, limit)
       .subscribe((pokemonList) => {
         this.allPokemon = pokemonList;
       });
@@ -32,12 +36,14 @@ export class LazyLoadedPokemonComponent implements OnInit {
     console.log($event);
   }
 
-
-  loadMore() {
-    this._pokemonService.getPokemon(0, 150)
+  loadMorePokemon() {
+    this._offset += 50;
+    this._limit = 50;
+    this._pokemonService.getPokemon(this._offset, this._limit)
       .subscribe((pokemonList) => {
-        console.log(pokemonList);
-        this.allPokemon = pokemonList;
+        pokemonList.forEach((pokemon) => {
+          this.allPokemon.push(pokemon);
+        });
       });
   }
 }

@@ -44,22 +44,22 @@ export class PokemonRepository {
 
     let mappedResponse;
 
-    if (!this._original151PokemonList) {
-      this._original151PokemonList = this._httpClient.get(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`)
-        .pipe(
-          map(response => mappedResponse = PokemonMapper.mapOriginalList(response)),
-          mergeMap(() => {
-            let listOfPokemon: Array<any> = [];
-            mappedResponse.pokemonResults.map((individualPokemon) => {
-              listOfPokemon = [...listOfPokemon, this.getPokemonDetails(individualPokemon.url)];
-            });
+    // if (!this._original151PokemonList) {
+    this._original151PokemonList = this._httpClient.get(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`)
+      .pipe(
+        map(response => mappedResponse = PokemonMapper.mapOriginalList(response)),
+        mergeMap(() => {
+          let listOfPokemon: Array<any> = [];
+          mappedResponse.pokemonResults.map((individualPokemon) => {
+            listOfPokemon = [...listOfPokemon, this.getPokemonDetails(individualPokemon.url)];
+          });
 
-            return forkJoin(listOfPokemon);
-          }),
-          publishReplay(1),
-          refCount()
-        );
-    }
+          return forkJoin(listOfPokemon);
+        }),
+        publishReplay(1),
+        refCount()
+      );
+    // }
     return this._original151PokemonList;
   }
 
