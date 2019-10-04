@@ -15,6 +15,7 @@ import {PaginatorComponent} from './components/paginator/paginator.component';
 import {PokemonDetailPageComponent} from './pages/pokemon-detail-page/pokemon-detail-page.component';
 import {PokemonGenderPipe} from './pipes/pokemon-gender.pipe';
 import { LazyLoadedPokemonComponent } from './pages/lazy-loaded-pokemon/lazy-loaded-pokemon.component';
+import {InfiniteScrollModule} from "ngx-infinite-scroll";
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { LazyLoadedPokemonComponent } from './pages/lazy-loaded-pokemon/lazy-loa
     CommonModule,
     AppRoutingModule,
     HttpClientModule,
+    InfiniteScrollModule,
   ]
 })
 export class PokedexModule {

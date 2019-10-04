@@ -31,4 +31,13 @@ export class LazyLoadedPokemonComponent implements OnInit {
   goToDetails($event: number) {
     console.log($event);
   }
+
+
+  loadMore() {
+    this._pokemonService.getPokemon(0, 150)
+      .subscribe((pokemonList) => {
+        console.log(pokemonList);
+        this.allPokemon = pokemonList;
+      });
+  }
 }
