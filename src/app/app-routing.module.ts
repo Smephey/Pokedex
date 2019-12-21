@@ -3,13 +3,10 @@ import {PokemonPageComponent} from './modules/pokedex/pages/pokemon-page/pokemon
 import {HomePageComponent} from './modules/pokedex/pages/home-page/home-page.component';
 import {NgModule} from '@angular/core';
 import {PagedPokemonComponent} from './modules/pokedex/pages/paged-pokemon/paged-pokemon.component';
-import {LazyLoadedPokemonComponent} from './modules/pokedex/pages/lazy-loaded-pokemon/lazy-loaded-pokemon.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomePageComponent},
   {path: 'pokemon', component: PokemonPageComponent},
-  {path: 'pagedpokemon', component: PagedPokemonComponent},
-  {path: 'lazyloadedpokemon', component: LazyLoadedPokemonComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: HomePageComponent}
 ];

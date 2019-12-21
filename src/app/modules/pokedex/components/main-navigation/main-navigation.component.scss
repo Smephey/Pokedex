@@ -1,5 +1,16 @@
 @import "../../../../../styles/variables";
 
-.deactivated-color {
-    background-color: $pokemon-red;
+:host {
+
+  button {
+    background-color: $pokemon-grey;
+    color: white;
+    font-weight: 700;
+    border: 0;
+    padding: .5rem 3rem;
+
+    &.active {
+      background-color: $pokemon-red;
+    }
+  }
 }

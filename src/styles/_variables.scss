@@ -4,6 +4,7 @@ $dark-grey: #070707;
 $light-grey: #919191;
 
 $dark-text: #212121;
+$pokemon-grey: #313131;
 
 //POKEMON COLOURS
 $fire-red: #fd7d24;
@@ -34,6 +35,8 @@ $font-family-base: $font-family-sans-serif !default;
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg: $font-size-base * 1.25 !default;
 $font-size-sm: $font-size-base * .875 !default;
+$paragraph-margin-bottom: 0;
+$headings-margin-bottom: 0;
 
 $font-weight-lighter: lighter !default;
 $font-weight-light: 300 !default;
