@@ -8,7 +8,6 @@ import {PokemonCardComponent} from './components/pokemon-card/pokemon-card.compo
 import {HttpClientModule} from '@angular/common/http';
 import {PokeNoPipe} from './pipes/pokeno.pipe';
 import {PokemonTypePipe} from './pipes/pokemon-type.pipe';
-import {PagedPokemonComponent} from './pages/paged-pokemon/paged-pokemon.component';
 import {SvgIconComponent} from './components/svg-icon/svg-icon.component';
 import {PokemonDetailPageComponent} from './pages/pokemon-detail-page/pokemon-detail-page.component';
 import {PokemonGenderPipe} from './pipes/pokemon-gender.pipe';
@@ -22,7 +21,6 @@ import {InfiniteScrollModule} from 'ngx-infinite-scroll';
     PokemonCardComponent,
     PokeNoPipe,
     PokemonTypePipe,
-    PagedPokemonComponent,
     SvgIconComponent,
     PokemonDetailPageComponent,
     PokemonGenderPipe,
